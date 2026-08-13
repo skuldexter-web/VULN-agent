@@ -199,7 +199,7 @@ class ExploitManager:
         """Run Metasploit exploit via resource script."""
         Utils.print_step(3, f"Launching Metasploit exploit")
         if not cve_id and not module:
-            Utils.print_info("No CVE/module provided, using default handler", status="W
+            Utils.print_info(No CVE/module provided, using default handler, status="W
 ARN")
             self.run_handler()
             return
