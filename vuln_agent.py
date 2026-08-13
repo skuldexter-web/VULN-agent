@@ -1,5 +1,6 @@
 import os
 import sys
+from argparse import ArgumentParser
 
 # Function to print steps and messages with proper colors
 class Utils:
@@ -48,12 +49,6 @@ class VulnerabilityScanner:
 
 # Class to attempt exploits based on detected CVEs
 class ExploitManager:
-    def __init__(self, target_ip, lhost, lport):
-        self.target_ip = target_ip
-        self.lhost = lhost
-        self.lport = lport
-        self.exploiter = None
-
     @staticmethod
     def run_handler():
         # Start a Metasploit multi/handler listener for exploitation attempts.
@@ -72,11 +67,6 @@ class ExploitManager:
 
 # Class to generate and deploy a Remote Access Trojan (RAT)
 class RATGenerator:
-    def __init__(self, lhost, lport, target_ip):
-        self.lhost = lhost
-        self.lport = lport
-        self.target_ip = target_ip
-
     @staticmethod
     def generate_payload(platform="w"):
         # Simulate generating the payload for a given platform.
@@ -119,9 +109,8 @@ class VulnAgent:
         cls()
         print(f"{Fore.CYAN}{BOLD}VULN Agent - Main Menu{RESET}")
         print("=" * 50)
-        parser = argparse.ArgumentParser(description="VULN Agent")
+        parser = ArgumentParser(description="VULN Agent")
         parser.add_argument("-t", "--target", help="Target IP address")
-        # Fix the unbalanced string literal
         parser.add_argument("-l", "--lhost", help="Local IP for reverse 
 connection (e.g ")
         parser.add_argument("-p", "--lport", type=int, default=4444, help="Local 
