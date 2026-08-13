@@ -149,8 +149,9 @@ class VulnerabilityScanner:
     def searchsploit_scan(self):
         """Run searchsploit to find related exploits."""
         Utils.print_step(2, "Searching ExploitDB via searchsploit")
-        command = ["searchsploit", "--color", self.target]  # Example: searchsploit tar
-get IP won't work; we need service. Use nmap output.
+        command = ["searchsploit", "--color", self.target]  
+        #Example: searchsploit tar
+        get IP won't work; we need service. Use nmap output.
         # In real usage we would parse nmap services and search by service:version
         Utils.print_info("Note: searchsploit requires service info. Using generic searc
 h.")
