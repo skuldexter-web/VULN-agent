@@ -1,5 +1,4 @@
-
-```python
+python
 #!/usr/bin/env python3
 
 # ================== BANNER ==================
