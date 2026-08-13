@@ -44,7 +44,7 @@ sudo apt update && sudo apt install nmap exploitdb metasploit-framework
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/vuln-agent.git
+git clone https://github.com/skuldexter-web/vuln-agent.git
 cd vuln-agent
 
 
